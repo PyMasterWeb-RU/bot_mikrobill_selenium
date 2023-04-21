@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-bot = TeleBot("6057100629:AAFXgO_yXws-iNV86HCyZpJrmIT8j7RPPfg")
+bot = TeleBot("Ваш токена бота")
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -33,7 +33,7 @@ def search(message):
     bot.send_message(message.chat.id, "Начинаю поиск")
     phrase = message.text
     driver.maximize_window()
-    driver.get('http://lk.vitacom55.ru/kassa/')
+    driver.get('ваш домен микротика/kassa/')
     login_input = driver.find_element(By.NAME, 'chaiserlogin')
     login_input.clear()
     login_input.send_keys(login)
